@@ -17,3 +17,12 @@ CREATE TABLE records (
     page_number INTEGER,
     FOREIGN KEY (document_id) REFERENCES documents(id) ON DELETE CASCADE
 );
+
+CREATE TABLE analysis_results (
+    id SERIAL PRIMARY KEY,
+    document_id INTEGER NOT NULL,
+    analysis_type VARCHAR(100) NOT NULL,
+    result TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (document_id) REFERENCES documents(id) ON DELETE CASCADE
+);
