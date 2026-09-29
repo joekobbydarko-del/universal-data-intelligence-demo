@@ -1,0 +1,1 @@
+-- Database schema for Universal Data Intelligence Demo
